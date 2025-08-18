@@ -1,0 +1,5 @@
+rg1                      = "azadorg"
+rg_location              = "West Europe"
+account_replication_type = "LRS"
+account_tier             = "Standard"
+storage_account_name     = "azadostg"
