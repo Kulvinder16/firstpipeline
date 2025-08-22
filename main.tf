@@ -11,7 +11,7 @@ resource "azurerm_storage_account" "example" {
   account_replication_type = var.account_replication_type
 }
 
-resource "azurerm_resource_group" "group_1" {
+resource "azurerm_resource_group" "group_2" {
   name     = var.rg2
   location = var.rg_location
 }
