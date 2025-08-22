@@ -7,8 +7,7 @@ trigger:
 variables:
   service_connection: 'AZ-ADO connection'
 
-pool:
-  vmImage: Agent_KS
+pool: Agent_KS
 
 steps:
 - task: TerraformInstaller@1
