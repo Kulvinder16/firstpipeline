@@ -22,6 +22,6 @@ resource "azurerm_resource_group" "group_3" {
 }
 
 resource "azurerm_resource_group" "group_4" {
-  name     = var.rg4
+  name     = var.rg5
   location = var.rg_location
 }
