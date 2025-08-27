@@ -10,18 +10,3 @@ resource "azurerm_storage_account" "example" {
   account_tier             = var.account_tier
   account_replication_type = var.account_replication_type
 }
-
-resource "azurerm_resource_group" "group_2" {
-  name     = var.rg2
-  location = var.rg_location
-}
-
-resource "azurerm_resource_group" "group_3" {
-  name     = var.rg3
-  location = var.rg_location
-}
-
-resource "azurerm_resource_group" "group_4" {
-  name     = var.rg5
-  location = var.rg_location
-}
