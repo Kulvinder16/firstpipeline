@@ -20,3 +20,8 @@ resource "azurerm_resource_group" "group_3" {
   name     = var.rg3
   location = var.rg_location
 }
+
+resource "azurerm_resource_group" "group_4" {
+  name     = var.rg5
+  location = var.rg_location
+}
