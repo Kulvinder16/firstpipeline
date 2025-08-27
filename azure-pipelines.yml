@@ -2,7 +2,7 @@ trigger:
   branches:
     include:
       - main
-      - feature101/*
+      - feature/*
 
 variables:
   service_connection: 'AZ-ADO connection'
