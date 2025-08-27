@@ -26,3 +26,4 @@ steps:
     command: 'apply'
     commandOptions: '--auto-approve'
     environmentServiceNameAzureRM: '$(service_connection)'
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
