@@ -20,3 +20,7 @@ variable "storage_account_name" {
 variable "rg2" {
     
 }
+
+variable "rg3" {
+  
+}
