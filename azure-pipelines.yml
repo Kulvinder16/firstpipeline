@@ -2,7 +2,7 @@ trigger:
   branches:
     include:
       - main
-      - feature101
+      - feature101/*
 
 variables:
   service_connection: 'AZ-ADO connection'
@@ -11,10 +11,12 @@ pool: 'Agent_KS'
 
 steps:
 - task: TerraformInstaller@1
+  displayName: terraform install
   inputs:
     terraformVersion: 'latest'
 
 - task: TerraformTask@5
+  displayName: terraform init
   inputs:
     provider: 'azurerm'
     command: 'init'
@@ -24,12 +26,14 @@ steps:
     backendAzureRmKey: 'first.tfstate'
 
 - task: TerraformTask@5
+  displayName: terraform plan
   inputs:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: '$(service_connection)'
 
 - task: TerraformTask@5
+  displayName: terraform apply
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
   inputs:
     provider: 'azurerm'
